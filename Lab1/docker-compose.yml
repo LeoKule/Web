@@ -6,3 +6,4 @@ services:
       - "8080:80"
     volumes:
       - ./code:/code
+      - ./site.conf:/etc/nginx/cong.d/site.conf
