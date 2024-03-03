@@ -9,3 +9,25 @@ $order = &$very_bad_unclear_name; // т.к $order инициализирован
 $order = " and 2 delicious leg<br/>";
 echo "\nYour order is: $very_bad_unclear_name";
 echo "\n";
+
+// Task 2
+echo "Task 2<br/>";
+$a = 14082004;
+echo $a;
+echo "<br/>";
+echo "\n";
+
+$float = 1.4;
+echo $float;
+echo "<br/>";
+echo "\n";
+
+$s = 14081992;
+echo $a - $s;
+echo "<br/>";
+echo "\n";
+
+$last_month = 1187.23;
+$this_month = 1089.98;
+echo $last_month - $this_month;
+echo "\n";
