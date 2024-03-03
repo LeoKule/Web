@@ -172,3 +172,14 @@ for ($i = 0; $i < count($arr); $i++){ // проходим
     }
 }
 echo $count, "\n", "<br/>";
+
+//Task 15
+echo "Task 15<br/>", "\n";
+
+function printStringReturnNumber()
+{
+    echo "Hello world! \n";
+    return rand(1, 100);
+}
+$my_Num = printStringReturnNumber();
+echo $my_Num, "\n", "<br/>";
