@@ -40,4 +40,11 @@ $months = 11;
 $days = $months * 16;
 $daysPerLanguage = $days / $numLanguages;
 echo $daysPerLanguage;
+echo "<br/>";
 echo "\n";
+
+//Task 12
+echo "Task 12<br/>";
+echo 8**2; // the first number is raised to the power of the second
+echo "<br/>";
+echo"\n";
