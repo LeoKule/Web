@@ -183,3 +183,67 @@ function printStringReturnNumber()
 }
 $my_Num = printStringReturnNumber();
 echo $my_Num, "\n", "<br/>";
+
+//Task 16
+echo "Task 16<br/>", "\n";
+
+function increaseEnthusiasm($str){
+    $str.= "!";
+    return $str;
+}
+echo increaseEnthusiasm("Believe in yourself"), "\n", "<br/>";
+
+function repeatThreeTimes($str)
+{
+    $temp = $str;
+    $str.= $temp;  //Добавляем к исходной временную
+    $str.= $temp;
+    return $str;
+}
+echo repeatThreeTimes("Believe in yourself"), "\n", "<br/>";
+echo increaseEnthusiasm(repeatThreeTimes("Believe in yourself")), "\n", "<br/>";
+
+function cut($str, $num = 10){
+    $strF = "";
+    for($i = 0; $i < $num && $i < strlen($str); $i++){
+        $strF[$i] = $str[$i];
+    }
+    return $strF;
+}
+
+echo cut("qwerty"),"\n", "<br/>"; // для примера взял меньше 10 символов.
+echo cut("qwerty", 2), "\n", "<br/>";
+
+$arr = [1,2,3,4,5,6,7,8,9];
+
+function recurs($array, $size = 0){ // Значение 0 нужно для того, чтобы в функцию передать только массив.
+    echo $array[$size++] , " ";
+    if($size < count($array)){ //
+        recurs($array, $size);
+    }
+}
+recurs($arr);
+echo "\n", "<br/>";
+
+function sumDigits($number) {
+    $sum = 0;
+
+    // Пока число больше 0, выделяем цифры и складываем их
+    while ($number > 0) {
+        $sum += $number % 10;
+        $number = (int)($number / 10);
+    }
+
+    // Если сумма больше 9, повторяем процесс
+    while ($sum > 9) {
+        $sum = sumDigits($sum);
+    }
+
+    return $sum;
+}
+// Пример
+$number = 12345;
+$result = sumDigits($number);
+echo "Сумма цифр числа $number: $result", "<br/>";
+
+
