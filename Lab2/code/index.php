@@ -323,3 +323,33 @@ $tempArray = ['a', 'b', 'c', 'd', 'e'];
 echo count($tempArray) . "<br/>";
 
 echo $tempArray[count($tempArray) - 1] . " " . $tempArray[count($tempArray) - 2] . "<br/>";
+
+// Task 18
+echo "Task 18<br/>";
+
+function firstTrueOrFalse($firstNum, $secondNum)
+{
+    if ($firstNum + $secondNum > 10) {
+        return true;
+    } else return false;
+}
+
+function secondTrueOrFalse($firstNum, $secondNum)
+{
+    if ($firstNum == $secondNum) {
+        return true;
+    } else return false;
+}
+
+$age = rand(1, 100);
+if (10 > $age or $age > 99) echo "число меньше 10 или больше 99<br/>"; else {
+    $sum = 0;
+    foreach (str_split("$age") as $digit) {
+        $sum += intval($digit);
+    }
+    if ($sum <= 9) echo "Сумма цифр однозначна<br/>"; else echo "Сумма цифр двузначна<br/>";
+}
+
+$Arylik = [1, 2, 5];
+if (count($Arylik) == 3) echo count($Arylik) , "<br>";
+
