@@ -362,3 +362,25 @@ foreach (range(1, 20) as $width) {
     $tempString .= "x";
 }
 
+// Task 20
+echo "Task20<br/>";
+
+$Arrishka = [1, 1, 2, 3, 5, 8, 13, 21];
+$average = array_sum($Arrishka) / count($Arrishka);
+echo $average . "<br>";
+
+$sum = array_sum(range(1, 100));
+echo $sum . "<br>";
+
+$Meow = [1, 1, 2, 3, 5, 8, 13, 21];
+$Meow = array_map('sqrt', $Meow);
+//echo $Meow[2];
+
+$arrayKeys = range('a', 'z');
+$arrayValues = range(1, 26);
+$tempArray = array_combine($arrayKeys, $arrayValues);
+echo $tempArray['a'] . " " . $tempArray['z'] . "<br>";
+
+$tempString = '1234567890';
+$sum = array_sum(str_split($tempString, 2));
+echo $sum;
