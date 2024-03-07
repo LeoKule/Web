@@ -353,3 +353,12 @@ if (10 > $age or $age > 99) echo "число меньше 10 или больше
 $Arylik = [1, 2, 5];
 if (count($Arylik) == 3) echo count($Arylik) , "<br>";
 
+// Task 19
+echo "Task19<br/>";
+
+$tempString = "x";
+foreach (range(1, 20) as $width) {
+    echo $tempString . "<br>";
+    $tempString .= "x";
+}
+
