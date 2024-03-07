@@ -277,3 +277,49 @@ for ($i = 0; $i < $size; $i++){
 }
 echo "<br/>";
 
+$Arr = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($Arr as $LargeArr) {
+    foreach ($LargeArr as $item) {
+        $sum += $item;
+    }
+}
+
+$tmpArr = [];
+// внешний цикл для создания трёх вложенных массивов
+for ($i = 1; $i <= 3; $i++) {
+    // внутренний цикл для заполнения каждого вложенного массива значениями
+    $innerArray = [];
+    for ($j = 1; $j <= 3; $j++) {
+        // вычисляем значение для каждой ячейки массива
+        unset($value);
+        $value = ($i - 1) * 3 + $j;
+        // добавляем значение во вложенный массив
+        $innerArray[] = $value;
+    }
+    // добавляем вложенный массив в основной массив
+    $ArrS[] = $innerArray;
+}
+
+// Цикл для вывода массива
+for ($i = 0; $i < count($ArrS); $i++) {
+    for ($j = 0; $j < count($ArrS[$i]); $j++) {
+        echo $ArrS[$i][$j] . " ";
+    }
+    echo "<br/>";
+}
+
+$tempArray = [2, 5, 3, 9];
+$result = $tempArray[0] * $tempArray[1] + $tempArray[2] * $tempArray[3];
+echo $result . "<br/>";
+
+$user = ['name' => "Sabrina", 'surname' => "Kuleva", 'patronymic' => "Nikolaevna"];
+echo $user["surname"] . " " . $user['name'] . " " . $user['patronymic'] . "<br/>";
+
+$date = ['year' => 2024, 'day' => 07, 'month' => 03];
+echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "<br/>";
+
+$tempArray = ['a', 'b', 'c', 'd', 'e'];
+echo count($tempArray) . "<br/>";
+
+echo $tempArray[count($tempArray) - 1] . " " . $tempArray[count($tempArray) - 2] . "<br/>";
